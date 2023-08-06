@@ -11,8 +11,6 @@ mutation addUser($username: String!, $email: String!, $password: String!) {
     }
   }
 `
-
-// Login user to page: required to save or delete books
 export const LOGIN_USER = gql`
 mutation loginUser($email: String!, $password: String!) {
     loginUser(email: $email, password: $password) {
@@ -24,8 +22,6 @@ mutation loginUser($email: String!, $password: String!) {
     }
   }
 `
-
-// save book to user's list
 export const SAVE_BOOK = gql`
 mutation saveBook($input: BookInput) {
   saveBook(BookInput: $input) {
@@ -44,8 +40,6 @@ mutation saveBook($input: BookInput) {
   }
 }
 `
-
-// remove book from user's list
 export const REMOVE_BOOK = gql`
 mutation removeBook($bookId: ID!) {
     removeBook(bookId: $bookId) {
