@@ -55,8 +55,8 @@ const resolvers = {
         return bookList;
       }
       throw new AuthenticationError('Not Logged In');
-    },
+    }
   }
-};
+}
 
 module.exports = resolvers;
